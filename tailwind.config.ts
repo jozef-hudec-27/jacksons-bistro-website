@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  important: true,
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,10 +9,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        openSans: ['var(--font-open-sans)'],
+        dancingScript: ['var(--font-dancing-script)'],
+        crimsonText: ['var(--font-crimson-text)'],
+      },
+      colors: {
+        black: {
+          100: '#0C1C0A',
+          75: '#495547',
+          50: '#868E85',
+          25: '#C2C6C2',
+          10: '#E6E8E6',
+          5: '#F3F3F3',
+        },
+        primary: '#B89754',
       },
     },
   },
