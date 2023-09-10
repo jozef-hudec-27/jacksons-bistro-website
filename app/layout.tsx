@@ -1,5 +1,6 @@
 import { Open_Sans, Dancing_Script, Crimson_Text } from 'next/font/google'
 import './globals.css'
+import Navbar from './components/navbar/Navbar'
 
 const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans' })
 const dancingScript = Dancing_Script({ subsets: ['latin'], variable: '--font-dancing-script' })
@@ -13,7 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${openSans.variable} ${dancingScript.variable} ${crimsonText.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

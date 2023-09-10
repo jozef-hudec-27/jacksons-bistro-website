@@ -1,12 +1,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply font-openSans text-[16px] text-black-75;
+* {
+  @apply p-0 m-0;
 }
 
-body {
-  @apply p-0 m-0;
+html {
+  @apply font-openSans text-[16px] text-black-75;
 }
 
 h1,
@@ -16,6 +16,10 @@ h4,
 h5,
 h6 {
   @apply font-crimsonText text-black-100;
+}
+
+a {
+  @apply no-underline;
 }
 
 h1 {
