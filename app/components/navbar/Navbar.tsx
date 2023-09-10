@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="p-[24px] flex justify-between items-center">
       <div className="flex items-center gap-[48px]">
-        <Image src={logo} alt="Jackson's Bistro logo" className="h-[64px] w-fit" />
+        <Image src={logo} alt="Jackson's Bistro logo" className="h-[48px] w-fit" />
 
         <Link href="/">
           <h6>Menu</h6>
@@ -26,7 +26,7 @@ function Navbar() {
       </div>
 
       <div className="flex items-center gap-[24px]">
-        <Link href="/" className="text-2xl text-primary font-dancingScript">
+        <Link href="/" className="link primary">
           Book a Table
         </Link>
 

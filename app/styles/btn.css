@@ -1,0 +1,15 @@
+.btn {
+  @apply appearance-none w-fit cursor-pointer;
+}
+
+.btn.primary {
+  @apply text-primary font-dancingScript border-[2px] border-primary border-solid bg-white px-[24px] py-[12px] text-3xl duration-700;
+}
+
+.btn.primary:hover, .btn.primary:focus {
+  @apply -translate-y-[6px] duration-300;
+}
+
+.link.primary {
+  @apply text-2xl text-primary font-dancingScript;
+}

@@ -1,11 +1,22 @@
+import Link from "next/link"
+
 function HomePage() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi maxime ea dolorem voluptates, quisquam optio
-        aliquid nam? A, odit? Accusantium maxime odit possimus fugiat facere reprehenderit dolore ex neque nobis.
-      </p>
+      <section id="hero">
+        <div
+          className="bg-[url('/assets/images/bartender_hero.jpg')] bg-cover bg-center border w-full h-[404px]"
+          aria-hidden
+        ></div>
+
+        <div className="flex flex-col gap-[42px] w-1/2 mx-auto mt-[64px]">
+          <h1>Experience Culinary Bliss at Jackson's Bistro. Where Flavors Dance and Memories Are Savored.</h1>
+
+          <Link href="" className="btn primary">
+            Indulge Today
+          </Link>
+        </div>
+      </section>
     </div>
   )
 }
