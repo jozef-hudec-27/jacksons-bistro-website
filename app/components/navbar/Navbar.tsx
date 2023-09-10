@@ -1,31 +1,27 @@
 import Image from 'next/image'
 import logo from '/public/assets/images/Logo.svg'
 import Link from 'next/link'
+import NavbarMobileNavigation from './NavbarMobileNavigation'
+import { navLinks } from '@/app/info'
 
 function Navbar() {
   return (
-    <nav className="p-[24px] flex justify-between items-center">
-      <div className="flex items-center gap-[48px]">
+    <nav className="p-[24px] flex justify-center md:justify-between items-center">
+      <div className="hidden md:flex items-center gap-[24px] lg:gap-[48px]">
         <Image src={logo} alt="Jackson's Bistro logo" className="h-[48px] w-fit" />
 
-        <Link href="/">
-          <h6>Menu</h6>
-        </Link>
+        {navLinks.slice(1).map((navLink) => {
+          const { label, path } = navLink
 
-        <Link href="/">
-          <h6>About Us</h6>
-        </Link>
-
-        <Link href="/">
-          <h6>Reservations</h6>
-        </Link>
-
-        <Link href="/">
-          <h6>Contact</h6>
-        </Link>
+          return (
+            <Link href={path}>
+              <h6>{label}</h6>
+            </Link>
+          )
+        })}
       </div>
 
-      <div className="flex items-center gap-[24px]">
+      <div className="hidden md:flex items-center gap-[12px] lg:gap-[24px]">
         <Link href="/" className="link primary">
           Book a Table
         </Link>
@@ -34,6 +30,8 @@ function Navbar() {
 
         <h6 className="text-black-50">(312) 555-1234</h6>
       </div>
+
+      <NavbarMobileNavigation />
     </nav>
   )
 }
