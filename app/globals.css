@@ -47,3 +47,7 @@ h5 {
 h6 {
   @apply sm:text-lg;
 }
+
+.carousel.carousel-slider .control-dots {
+  @apply w-fit left-1/2 -translate-x-1/2 flex gap-[12px] sm:gap-[16px] bottom-[8px] sm:bottom-[24px];
+}

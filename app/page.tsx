@@ -1,4 +1,6 @@
-import Link from "next/link"
+import Link from 'next/link'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import MealsCarousel from './components/MealsCarousel'
 
 function HomePage() {
   return (
@@ -16,6 +18,10 @@ function HomePage() {
             Indulge Today
           </Link>
         </div>
+      </section>
+
+      <section id="foods" className="mt-[96px] sm:mt-[160px]">
+        <MealsCarousel />
       </section>
     </div>
   )
