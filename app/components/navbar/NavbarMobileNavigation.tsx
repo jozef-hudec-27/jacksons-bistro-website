@@ -2,27 +2,33 @@
 import '@szhsin/react-menu/dist/index.css'
 import '@szhsin/react-menu/dist/transitions/slide.css'
 
-import { Menu, MenuDivider, MenuItem } from '@szhsin/react-menu'
+import { ControlledMenu, MenuDivider, MenuItem, useClick } from '@szhsin/react-menu'
 import Image from 'next/image'
 import { BsChevronDown } from 'react-icons/bs'
 import logo from '/public/assets/images/Logo.svg'
 import { navLinks } from '@/app/info'
 import { usePathname } from 'next/navigation'
+import { useRef, useState } from 'react'
 
 function NavbarMobileNavigation() {
+  const [isOpen, setIsOpen] = useState(false)
+  const btnRef = useRef(null)
+  const btnProps = useClick(isOpen, setIsOpen)
   const pathname = usePathname()
 
   return (
     <div id="mobile-navigation" className="md:hidden">
-      <Menu
-        menuButton={
-          <button className="flex items-center gap-[8px]" aria-label="Navigation menu">
-            <Image src={logo} alt="Jackson's Bistro logo" className="h-[48px] w-fit" aria-hidden />
-            <BsChevronDown className="text-xl text-primary" aria-hidden />
-          </button>
-        }
+      <button className="flex items-center gap-[8px]" aria-label="Navigation menu" ref={btnRef} {...btnProps}>
+        <Image src={logo} alt="Jackson's Bistro logo" className="h-[48px] w-fit" aria-hidden />
+        <BsChevronDown className={`${isOpen && 'rotate-180'} text-xl text-primary duration-300`} aria-hidden />
+      </button>
+
+      <ControlledMenu
         align="center"
         gap={12}
+        state={isOpen ? 'open' : 'closed'}
+        anchorRef={btnRef}
+        onClose={() => setIsOpen(false)}
         transition
       >
         {navLinks.map((navLink, i) => {
@@ -41,7 +47,7 @@ function NavbarMobileNavigation() {
             </div>
           )
         })}
-      </Menu>
+      </ControlledMenu>
     </div>
   )
 }

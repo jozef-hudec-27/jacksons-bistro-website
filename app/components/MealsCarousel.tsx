@@ -19,9 +19,9 @@ function MealsCarousel() {
   const carouselArrow = (direction: 'left' | 'right', clickHandler: () => void, label: string): React.ReactNode => {
     return (
       <button
-        className={`absolute ${
-          direction === 'left' ? 'left-[12px] sm:left-[48px]' : 'right-[12px] sm:right-[48px]'
-        } top-1/2 -translate-y-1/2 text-white text-3xl sm:text-5xl z-10`}
+        className={`hidden sm:block absolute ${
+          direction === 'left' ? 'left-[48px]' : 'right-[48px]'
+        } top-1/2 -translate-y-1/2 text-white text-5xl z-10`}
         onClick={clickHandler}
         aria-label={label}
       >
