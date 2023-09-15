@@ -3,3 +3,19 @@ export interface NavLink {
   path: string
   divider?: boolean
 }
+
+export interface Tab {
+  title: string
+  body: React.ReactNode
+}
+
+export interface MenuMeal {
+  name: string
+  description: string
+  image: any
+}
+
+export interface MenuSection {
+  title: string
+  meals: MenuMeal[]
+}
