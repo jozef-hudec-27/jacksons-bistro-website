@@ -8,7 +8,9 @@ function Navbar() {
   return (
     <nav className="p-[24px] flex justify-center md:justify-between items-center">
       <div className="hidden md:flex items-center gap-[24px] lg:gap-[48px]">
-        <Image src={logo} alt="Jackson's Bistro logo" className="h-[48px] w-fit" />
+        <Link href="/">
+          <Image src={logo} alt="Jackson's Bistro logo" className="h-[48px] w-fit" />
+        </Link>
 
         {navLinks.slice(1).map((navLink) => {
           const { label, path } = navLink

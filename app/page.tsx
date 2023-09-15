@@ -2,60 +2,9 @@ import Link from 'next/link'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import MealsCarousel from './components/MealsCarousel'
 import Image from 'next/image'
-
-import chefKitchen from '/public/assets/images/instagram-posts/chef-kitchen.jpg'
-import chefSlice from '/public/assets/images/instagram-posts/chef-slice.jpg'
-import insideRestaurant from '/public/assets/images/instagram-posts/inside-restaurant.jpg'
-import meal from '/public/assets/images/instagram-posts/meal.jpg'
-import pastaPan from '/public/assets/images/instagram-posts/pasta-pan.jpg'
-import waiter from '/public/assets/images/instagram-posts/waiter.jpg'
-
-interface InstagramPost {
-  image: any
-  alt: string
-  description: string
-}
+import { instagramPosts } from './info'
 
 function HomePage() {
-  const instagramPosts: InstagramPost[] = [
-    {
-      image: chefKitchen,
-      alt: 'Chef cooking in the kitchen',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia arcu in neque fermentum, ac maximus dui lobortis. In facilisis ultricies sapien vel interdum. Phasellus maximus sed orci non porta. Praesent luctus convallis tellus. Curabitur vel sodales nulla. Mauris volutpat nisl sed risus sodales, at tempor lectus ultricies. Vivamus pulvinar, magna at aliquam cursus, justo ante imperdiet nunc, at vestibulum risus dolor ut tortor.',
-    },
-    {
-      image: chefSlice,
-      alt: 'Chef slicing vegetables with a knife',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia arcu in neque fermentum, ac maximus dui lobortis. In facilisis ultricies sapien vel interdum. Phasellus maximus sed orci non porta. Praesent luctus convallis tellus. Curabitur vel sodales nulla. Mauris volutpat nisl sed risus sodales, at tempor lectus ultricies. Vivamus pulvinar, magna at aliquam cursus, justo ante imperdiet nunc, at vestibulum risus dolor ut tortor.',
-    },
-    {
-      image: insideRestaurant,
-      alt: 'Restaurant interior',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia arcu in neque fermentum, ac maximus dui lobortis. In facilisis ultricies sapien vel interdum. Phasellus maximus sed orci non porta. Praesent luctus convallis tellus. Curabitur vel sodales nulla. Mauris volutpat nisl sed risus sodales, at tempor lectus ultricies. Vivamus pulvinar, magna at aliquam cursus, justo ante imperdiet nunc, at vestibulum risus dolor ut tortor.',
-    },
-    {
-      image: meal,
-      alt: 'Cooked meal',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia arcu in neque fermentum, ac maximus dui lobortis. In facilisis ultricies sapien vel interdum. Phasellus maximus sed orci non porta. Praesent luctus convallis tellus. Curabitur vel sodales nulla. Mauris volutpat nisl sed risus sodales, at tempor lectus ultricies. Vivamus pulvinar, magna at aliquam cursus, justo ante imperdiet nunc, at vestibulum risus dolor ut tortor.',
-    },
-    {
-      image: pastaPan,
-      alt: 'Pan with pasta and vegetables',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia arcu in neque fermentum, ac maximus dui lobortis. In facilisis ultricies sapien vel interdum. Phasellus maximus sed orci non porta. Praesent luctus convallis tellus. Curabitur vel sodales nulla. Mauris volutpat nisl sed risus sodales, at tempor lectus ultricies. Vivamus pulvinar, magna at aliquam cursus, justo ante imperdiet nunc, at vestibulum risus dolor ut tortor.',
-    },
-    {
-      image: waiter,
-      alt: 'Waiter holding a plate with finished meal',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia arcu in neque fermentum, ac maximus dui lobortis. In facilisis ultricies sapien vel interdum. Phasellus maximus sed orci non porta. Praesent luctus convallis tellus. Curabitur vel sodales nulla. Mauris volutpat nisl sed risus sodales, at tempor lectus ultricies. Vivamus pulvinar, magna at aliquam cursus, justo ante imperdiet nunc, at vestibulum risus dolor ut tortor.',
-    },
-  ]
-
   return (
     <div>
       <section id="hero">
@@ -73,13 +22,13 @@ function HomePage() {
         </div>
       </section>
 
-      <section id="foods" className="mt-[96px] sm:mt-[160px]">
+      <section id="foods" className="section mid-section">
         <MealsCarousel />
       </section>
 
       <section
         id="social"
-        className="flex flex-col items-center gap-[48px] sm:gap-[64px] w-11/12 mt-[96px] sm:mt-[160px] mx-auto"
+        className="section mid-section flex flex-col items-center gap-[48px] sm:gap-[64px] w-11/12"
       >
         <h2 className="uppercase">
           The latest from <br />

@@ -1,8 +1,10 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind base;
+
 @import './styles/btn.css';
 
+/* --GENERAL */
 * {
   @apply p-0 m-0;
 }
@@ -47,7 +49,16 @@ h5 {
 h6 {
   @apply sm:text-lg;
 }
+/* GENERAL-- */
 
 .carousel.carousel-slider .control-dots {
   @apply w-fit left-1/2 -translate-x-1/2 flex gap-[12px] sm:gap-[16px] bottom-[8px] sm:bottom-[24px];
+}
+
+.section {
+  @apply mx-auto;
+}
+
+.section.mid-section {
+  @apply mt-[96px] sm:mt-[160px];
 }

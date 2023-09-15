@@ -19,3 +19,9 @@ export interface MenuSection {
   title: string
   meals: MenuMeal[]
 }
+
+export interface InstagramPost {
+  image: any
+  alt: string
+  description: string
+}

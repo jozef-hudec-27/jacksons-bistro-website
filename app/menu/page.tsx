@@ -17,7 +17,7 @@ function MenuPage() {
         </h1>
       </section>
 
-      <section id="menu" className="w-11/12 mx-auto mt-[96px] sm:mt-[160px]">
+      <section id="menu" className="section mid-section w-11/12">
         <Tabs
           defaultIndex={1}
           tabs={menu.map((menuSection) => {
