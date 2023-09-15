@@ -25,3 +25,9 @@ export interface InstagramPost {
   alt: string
   description: string
 }
+
+export interface TimelineEra {
+  title: string
+  description: string
+  image: any
+}
