@@ -26,8 +26,22 @@ export interface InstagramPost {
   description: string
 }
 
+// ABOUT
+
 export interface TimelineEra {
   title: string
   description: string
   image: any
+}
+
+export interface TeamMember {
+  name: string
+  image: any
+  description: string
+}
+
+export interface PhilosophyEntry {
+  title: string
+  description: string
+  path: string
 }

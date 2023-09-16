@@ -1,9 +1,15 @@
-import { TimelineEra } from '../interfaces'
+import { PhilosophyEntry, TeamMember, TimelineEra } from '../interfaces'
 
+// Our Story
 import restaurant1960 from '/public/assets/images/timeline/1960-restaurant.jpg'
 import restaurant1980 from '/public/assets/images/timeline/1980-restaurant.jpg'
 import restaurant2000 from '/public/assets/images/timeline/2000-restaurant.jpg'
 import modernRestaurant from '/public/assets/images/timeline/modern-restaurant.jpg'
+
+// Our Team
+import chef from '/public/assets/images/team/chef.jpg'
+import pastryChef from '/public/assets/images/team/pastry-chef.jpg'
+import waiter from '/public/assets/images/team/waiter.jpg'
 
 export const timeline: TimelineEra[] = [
   {
@@ -25,5 +31,44 @@ export const timeline: TimelineEra[] = [
     title: 'Present Day - Culinary Wonderland',
     description: `Today, under the guidance of Chef Ethan Jackson, the legacy continues to flourish. Jackson's Bistro has become a culinary destination celebrated for its avant-garde presentations, impeccable service, and a menu that is a love letter to flavors from around the world. With an unyielding dedication to quality and an unwavering commitment to delighting every palate, Jackson's Bistro invites you to embark on a culinary journey that spans generations.`,
     image: modernRestaurant,
+  },
+]
+
+export const team: TeamMember[] = [
+  {
+    image: chef,
+    name: 'Chef',
+    description: `A visionary culinary artist with a knack for marrying diverse flavors. Chef Ethan is a trailblazer in the kitchen, infusing global inspirations into every dish. His creativity and dedication shine through in each plate, making dining at Jackson's Bistro an unforgettable experience.`,
+  },
+  {
+    image: pastryChef,
+    name: 'Pastry Chef',
+    description: `A master of sweet alchemy, Olivia adds a touch of magic to every dessert she creates. Her exquisite pastries and innovative treats are a delightful finale to every meal, leaving guests craving for more.`,
+  },
+  {
+    image: waiter,
+    name: 'Head Waiter',
+    description: `Luis embodies the essence of gracious service at Jackson's Bistro. His professionalism, warmth, and extensive menu knowledge create an engaging dining experience that leaves guests wanting to return.`,
+  },
+]
+
+export const philosophy: PhilosophyEntry[] = [
+  {
+    title: 'Sourcing Excellence',
+    description:
+      'We are committed to the pursuit of excellence, starting with the ingredients we choose. We source locally whenever possible, forging relationships with farmers and artisans who share our dedication to quality and sustainability. Every bite tells a tale of meticulous selection and careful curation.',
+    path: "bg-[url('/assets/images/philosophy/sourcing.jpg')]",
+  },
+  {
+    title: 'Global Inspiration, Local Heart',
+    description:
+      "We draw inspiration from the world's cuisines, celebrating the diverse tapestry of flavors that enrich our global culinary heritage. But at our core, we remain rooted in our local community. Our goal is to transport you on a gastronomic journey while making you feel at home, surrounded by the warmth of familiar hospitality.",
+    path: "bg-[url('/assets/images/philosophy/inspiration.jpg')]",
+  },
+  {
+    title: 'Memories Shared, Moments Created',
+    description:
+      "For us, dining is more than a meal—it's an experience woven with care, designed to create memories that linger long after the last bite. Whether it's a romantic evening, a family gathering, or a celebration of milestones, we take pride in being a part of your cherished moments.",
+    path: "bg-[url('/assets/images/philosophy/memories.jpg')]",
   },
 ]

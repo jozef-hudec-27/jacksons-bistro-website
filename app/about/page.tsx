@@ -1,10 +1,6 @@
 import Image from 'next/image'
-import { timeline } from './info'
+import { philosophy, team, timeline } from './info'
 import SlideGallery from '../components/slide_gallery/SlideGallery'
-
-import chef from '/public/assets/images/team/chef.jpg'
-import pastryChef from '/public/assets/images/team/pastry-chef.jpg'
-import waiter from '/public/assets/images/team/waiter.jpg'
 
 function AboutPage() {
   return (
@@ -47,24 +43,29 @@ function AboutPage() {
         <h2>Our Team</h2>
 
         <SlideGallery
-          slides={[
-            {
-              image: chef,
-              alt: 'Chef',
-              description: `A visionary culinary artist with a knack for marrying diverse flavors. Chef Ethan is a trailblazer in the kitchen, infusing global inspirations into every dish. His creativity and dedication shine through in each plate, making dining at Jackson's Bistro an unforgettable experience.`,
-            },
-            {
-              image: pastryChef,
-              alt: 'Pastry Chef',
-              description: `A master of sweet alchemy, Olivia adds a touch of magic to every dessert she creates. Her exquisite pastries and innovative treats are a delightful finale to every meal, leaving guests craving for more.`,
-            },
-            {
-              image: waiter,
-              alt: 'Head Waiter',
-              description: `Luis embodies the essence of gracious service at Jackson's Bistro. His professionalism, warmth, and extensive menu knowledge create an engaging dining experience that leaves guests wanting to return.`,
-            },
-          ]}
+          slides={team.map((member) => ({ image: member.image, alt: member.name, description: member.description }))}
         />
+      </section>
+
+      <section
+        id="our-philosophy"
+        className="section mid-section w-full sm:w-10/12 flex flex-col items-center gap-[48px] sm:gap-[64px]"
+      >
+        <h2>Our Philosophy</h2>
+
+        {philosophy.map((entry, index) => {
+          const { title, description, path } = entry
+
+          return (
+            <div key={index} className={`${path} bg-cover bg-center border w-full h-[384px] relative`}>
+              <div className="flex flex-col gap-[24px] sm:gap-[32px] justify-center items-center absolute left-0 top-0 w-full h-full bg-[rgba(12,28,10,0.5)] text-white">
+                <h3 className="text-white font-semibold">{title}</h3>
+
+                <p className="w-11/12 sm:w-2/3 lg:w-[37%]">{description}</p>
+              </div>
+            </div>
+          )
+        })}
       </section>
     </div>
   )
