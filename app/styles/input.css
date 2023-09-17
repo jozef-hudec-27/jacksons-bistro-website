@@ -1,0 +1,16 @@
+.input {
+  @apply appearance-none w-fit outline-none;
+}
+
+.input:hover,
+.input:focus {
+  @apply outline-none;
+}
+
+.input.primary {
+  @apply text-black-75 px-[24px] py-[12px] border border-solid border-primary rounded-full focus:shadow-lg hover:shadow-md;
+}
+
+textarea.input.primary {
+  @apply rounded-[24px];
+}

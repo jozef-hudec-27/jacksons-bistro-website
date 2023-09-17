@@ -3,6 +3,7 @@
 @tailwind base;
 
 @import './styles/btn.css';
+@import './styles/input.css';
 
 /* --GENERAL */
 * {
