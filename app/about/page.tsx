@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { philosophy, team, timeline } from './info'
 import SlideGallery from '../components/slide_gallery/SlideGallery'
+import GallerySwiper from '../components/GallerySwiper'
 
 function AboutPage() {
   return (
@@ -66,6 +67,12 @@ function AboutPage() {
             </div>
           )
         })}
+      </section>
+
+      <section id="gallery" className="section mid-section w-11/12 flex flex-col items-center gap-[48px] sm:gap-[64px]">
+        <h2>Gallery</h2>
+
+        <GallerySwiper />
       </section>
     </div>
   )

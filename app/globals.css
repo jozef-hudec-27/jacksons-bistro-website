@@ -55,6 +55,30 @@ h6 {
   @apply w-fit left-1/2 -translate-x-1/2 flex gap-[12px] sm:gap-[16px] bottom-[8px] sm:bottom-[24px];
 }
 
+.swiper {
+  @apply !flex flex-col gap-[12px];
+}
+
+.swiper-slide {
+  @apply !w-auto;
+}
+
+.swiper-slide::after {
+  @apply bg-[rgba(12,28,10,0.25)] content-[''] absolute top-0 left-0 w-full h-full;
+}
+
+.swiper-slide-active::after {
+  @apply w-0;
+}
+
+.swiper-scrollbar {
+  @apply !static !w-full !bg-black-5 !h-[4px];
+}
+
+.swiper-scrollbar-drag {
+  @apply !bg-black-25;
+}
+
 .section {
   @apply mx-auto;
 }
