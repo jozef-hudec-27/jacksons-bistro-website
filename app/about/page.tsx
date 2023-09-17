@@ -7,9 +7,9 @@ function AboutPage() {
   return (
     <div>
       <section id="our-story">
-        <div className="bg-[url('/assets/images/about_hero.jpg')] bg-cover bg-center border w-full h-[20vh] sm:h-[25vh] relative">
-          <div className="flex justify-center items-center absolute left-0 top-0 w-full h-full bg-[rgba(12,28,10,0.5)] text-white">
-            <h2 className="text-white font-dancingScript font-semibold">Our Story</h2>
+        <div className="hero-bg bg-[url('/assets/images/about_hero.jpg')]">
+          <div className="wrapper">
+            <h2>Our Story</h2>
           </div>
         </div>
 

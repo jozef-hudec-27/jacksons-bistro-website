@@ -79,7 +79,7 @@ function Footer() {
         <h3 className="text-primary font-semibold">Location</h3>
         <h4>123 Culinary Avenue</h4>
         <h4>Chicago, IL 60601</h4>
-        <button className="btn primary">Book a Table</button>
+        <Link href="/reservations" className="btn primary">Book a Table</Link>
       </div>
     </footer>
   )

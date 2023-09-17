@@ -52,10 +52,13 @@ h6 {
 }
 /* GENERAL-- */
 
+/* --CAROUSEL */
 .carousel.carousel-slider .control-dots {
   @apply w-fit left-1/2 -translate-x-1/2 flex gap-[12px] sm:gap-[16px] bottom-[8px] sm:bottom-[24px];
 }
+/* CAROUSEL-- */
 
+/* --SWIPER */
 .swiper {
   @apply !flex flex-col gap-[12px];
 }
@@ -79,6 +82,7 @@ h6 {
 .swiper-scrollbar-drag {
   @apply !bg-black-25;
 }
+/* SWIPER-- */
 
 .section {
   @apply mx-auto;
@@ -86,4 +90,18 @@ h6 {
 
 .section.mid-section {
   @apply mt-[96px] sm:mt-[160px];
+}
+
+.hero-bg {
+  @apply bg-cover bg-center border w-full h-[20vh] sm:h-[25vh] relative;
+}
+
+.hero-bg .wrapper {
+  @apply flex justify-center items-center absolute left-0 top-0 w-full h-full bg-[rgba(12,28,10,0.5)];
+}
+
+.hero-bg .wrapper h1,
+.hero-bg .wrapper h2,
+.hero-bg .wrapper h3 {
+  @apply text-white font-dancingScript font-semibold;
 }

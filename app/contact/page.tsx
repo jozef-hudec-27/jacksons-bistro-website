@@ -5,9 +5,9 @@ function ContactPage() {
   return (
     <div>
       <section id="contact">
-        <div className="bg-[url('/assets/images/contact_hero.jpg')] bg-cover bg-center border w-full h-[20vh] sm:h-[25vh] relative">
-          <div className="flex justify-center items-center absolute left-0 top-0 w-full h-full bg-[rgba(12,28,10,0.5)] text-white">
-            <h1 className="text-white font-dancingScript font-semibold">Contact</h1>
+        <div className="hero-bg bg-[url('/assets/images/contact_hero.jpg')]">
+          <div className="wrapper">
+            <h1>Contact</h1>
           </div>
         </div>
 
@@ -51,12 +51,10 @@ function ContactPage() {
             <p>(312) 555-1234</p>
           </div>
 
-          <div className="flex items-center justify-between">
+          <Link href="mailto:info@jacksonsbistro.eats" className="flex items-center justify-between">
             <BsEnvelopeFill className="text-3xl text-black-50" />
-            <Link href="mailto:info@jacksonsbistro.eats">
-              <p>info@jacksonsbistro.eats</p>
-            </Link>
-          </div>
+            <p>info@jacksonsbistro.eats</p>
+          </Link>
         </div>
       </section>
     </div>
