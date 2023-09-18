@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import { BsFacebook, BsTiktok, BsInstagram, BsEnvelopeFill, BsTelephoneFill } from 'react-icons/bs'
 
+export const metadata = {
+  title: 'Contact',
+  description:
+    'Reach out to us. We would love to hear from you. Email us at info@jacksonsbistro.eats or call (312) 555-1234.',
+}
+
 function ContactPage() {
   return (
     <div>
@@ -15,11 +21,11 @@ function ContactPage() {
           <p className="italic">Leave us a message</p>
 
           <form className="flex flex-col gap-[16px] w-full">
-            <input type="text" className="input primary w-full" placeholder="Name" required />
+            <input type="text" className="input primary w-full" placeholder="Name" aria-label="Name" required />
 
-            <input type="email" className="input primary w-full" placeholder="Email" required />
+            <input type="email" className="input primary w-full" placeholder="Email" aria-label="Email" required />
 
-            <textarea className="input primary w-full" placeholder="Message" required></textarea>
+            <textarea className="input primary w-full" placeholder="Message" aria-label="Message" required></textarea>
 
             <button className="text-black-100 font-bold font-crimsonText text-xl py-[8px]">Send</button>
           </form>
@@ -31,15 +37,15 @@ function ContactPage() {
 
         <div className="flex flex-col gap-[24px] sm:gap-[32px] w-[240px]">
           <div className="flex items-center justify-between text-3xl text-black-50 px-[4px]">
-            <Link href="/">
+            <Link href="/" aria-label="Facebook">
               <BsFacebook />
             </Link>
 
-            <Link href="/">
+            <Link href="/" aria-label="TikTok">
               <BsTiktok />
             </Link>
 
-            <Link href="/">
+            <Link href="/" aria-label="Instagram">
               <BsInstagram />
             </Link>
           </div>
@@ -52,7 +58,7 @@ function ContactPage() {
           </div>
 
           <Link href="mailto:info@jacksonsbistro.eats" className="flex items-center justify-between">
-            <BsEnvelopeFill className="text-3xl text-black-50" />
+            <BsEnvelopeFill className="text-3xl text-black-50" aria-hidden />
             <p>info@jacksonsbistro.eats</p>
           </Link>
         </div>

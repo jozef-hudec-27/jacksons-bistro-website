@@ -39,13 +39,13 @@ function Footer() {
         <h3 className="text-primary font-semibold">Contact & Social</h3>
 
         <div className="flex items-center justify-between w-full text-black-50 text-2xl">
-          <Link href="/">
+          <Link href="/" aria-label="Facebook">
             <BsFacebook />
           </Link>
-          <Link href="/">
+          <Link href="/" aria-label="TikTok">
             <BsTiktok />
           </Link>
-          <Link href="/">
+          <Link href="/" aria-label="Instagram">
             <BsInstagram />
           </Link>
         </div>

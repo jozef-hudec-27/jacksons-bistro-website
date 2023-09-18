@@ -40,7 +40,7 @@ function MealsCarousel() {
       infiniteLoop
       renderIndicator={(onClickHandler, isSelected, index, label) => {
         return (
-          <div
+          <li
             onClick={onClickHandler}
             onKeyDown={onClickHandler}
             key={index}
@@ -52,7 +52,7 @@ function MealsCarousel() {
             } rounded-full`}
           >
             {isSelected}
-          </div>
+          </li>
         )
       }}
       renderArrowPrev={(clickHandler, hasPrev, label) => {
@@ -65,7 +65,7 @@ function MealsCarousel() {
       {meals.map((meal, i) => {
         const { path, alt } = meal
 
-        return <div key={i} className={`h-[25vh] sm:h-[47vh] ${path} bg-cover bg-center`} aria-label={alt}></div>
+        return <div key={i} className={`h-[25vh] sm:h-[47vh] ${path} bg-cover bg-center`} role="img" aria-label={alt}></div>
       })}
     </Carousel>
   )

@@ -3,6 +3,12 @@ import { philosophy, team, timeline } from './info'
 import SlideGallery from '../components/slide_gallery/SlideGallery'
 import GallerySwiper from '../components/GallerySwiper'
 
+export const metadata = {
+  title: 'About Us',
+  description:
+    "Jackson's Bistro is a restaurant with rich history. From our humble beginnings to our current success, we are proud to serve you.",
+}
+
 function AboutPage() {
   return (
     <div>

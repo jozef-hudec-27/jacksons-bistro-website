@@ -2,6 +2,11 @@ import Tabs from '../components/tabs/Tabs'
 import Image from 'next/image'
 import { menu } from './info'
 
+export const metadata = {
+  title: 'Our Menu',
+  description: 'Indulge in a Culinary Symphony. Each Dish Tells a Story.',
+}
+
 function MenuPage() {
   return (
     <div>

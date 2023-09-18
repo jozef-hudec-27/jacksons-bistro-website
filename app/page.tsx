@@ -4,6 +4,14 @@ import MealsCarousel from './components/MealsCarousel'
 import Image from 'next/image'
 import { instagramPosts } from './info'
 
+export const metadata = {
+  title: {
+    absolute: "Jackson's Bistro | Restaurant Spanning Generations",
+  },
+  description:
+    "Jackson's Bistro is a restaurant that spans generations. We offer a wide variety of food and drinks to satisfy any palate.",
+}
+
 function HomePage() {
   return (
     <div>
@@ -26,10 +34,7 @@ function HomePage() {
         <MealsCarousel />
       </section>
 
-      <section
-        id="social"
-        className="section mid-section flex flex-col items-center gap-[48px] sm:gap-[64px] w-11/12"
-      >
+      <section id="social" className="section mid-section flex flex-col items-center gap-[48px] sm:gap-[64px] w-11/12">
         <h2 className="uppercase">
           The latest from <br />
           <span className="text-primary">@JacksonsBistro</span>
