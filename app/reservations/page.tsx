@@ -8,7 +8,7 @@ function ReservationsPage() {
   return (
     <div>
       <section id="reservations">
-        <div className="hero-bg bg-[url('/assets/images/reservations_hero.jpg')]">
+        <div className="hero-bg bg-[url('/assets/images/reservations_hero.webp')]">
           <div className="wrapper">
             <h1>Reservations</h1>
           </div>

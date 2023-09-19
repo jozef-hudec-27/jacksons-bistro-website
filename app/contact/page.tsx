@@ -11,7 +11,7 @@ function ContactPage() {
   return (
     <div>
       <section id="contact">
-        <div className="hero-bg bg-[url('/assets/images/contact_hero.jpg')]">
+        <div className="hero-bg bg-[url('/assets/images/contact_hero.webp')]">
           <div className="wrapper">
             <h1>Contact</h1>
           </div>

@@ -14,7 +14,7 @@ function AboutPage() {
   return (
     <div>
       <section id="our-story">
-        <div className="hero-bg bg-[url('/assets/images/about_hero.jpg')]">
+        <div className="hero-bg bg-[url('/assets/images/about_hero.webp')]">
           <div className="wrapper">
             <h2>Our Story</h2>
           </div>

@@ -17,7 +17,7 @@ function HomePage() {
     <div>
       <section id="hero">
         <div
-          className="bg-[url('/assets/images/bartender_hero.jpg')] bg-cover bg-center border w-full h-[25vh] sm:h-[47vh]"
+          className="bg-[url('/assets/images/bartender_hero.webp')] bg-cover bg-center border w-full h-[25vh] sm:h-[47vh]"
           aria-hidden
         ></div>
 
