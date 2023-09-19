@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect } from 'react'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import { Carousel } from 'react-responsive-carousel'
+import useLazyLoadBgImg from '../hooks/useLazyLoadBgImg'
 
 interface Meal {
   path: string
@@ -32,20 +32,7 @@ function MealsCarousel() {
   }
 
   //   Lazy load meal images in the carousel
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, { rootMargin: '90px' })
-
-    function handleIntersection(entries: any) {
-      entries.map((entry: any) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(entry.target.dataset.src)
-          observer.unobserve(entry.target)
-        }
-      })
-    }
-
-    document.querySelectorAll('.meal-photo').forEach((photo) => observer.observe(photo))
-  }, [])
+  useLazyLoadBgImg('.meal-photo', 90)
 
   return (
     <Carousel
