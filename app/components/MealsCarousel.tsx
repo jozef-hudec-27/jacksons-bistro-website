@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import { Carousel } from 'react-responsive-carousel'
 
@@ -29,6 +30,22 @@ function MealsCarousel() {
       </button>
     )
   }
+
+  //   Lazy load meal images in the carousel
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, { rootMargin: '90px' })
+
+    function handleIntersection(entries: any) {
+      entries.map((entry: any) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(entry.target.dataset.src)
+          observer.unobserve(entry.target)
+        }
+      })
+    }
+
+    document.querySelectorAll('.meal-photo').forEach((photo) => observer.observe(photo))
+  }, [])
 
   return (
     <Carousel
@@ -65,7 +82,15 @@ function MealsCarousel() {
       {meals.map((meal, i) => {
         const { path, alt } = meal
 
-        return <div key={i} className={`h-[25vh] sm:h-[47vh] ${path} bg-cover bg-center`} role="img" aria-label={alt}></div>
+        return (
+          <div
+            key={i}
+            className="meal-photo h-[25vh] sm:h-[47vh] bg-cover bg-center"
+            role="img"
+            data-src={path}
+            aria-label={alt}
+          ></div>
+        )
       })}
     </Carousel>
   )
