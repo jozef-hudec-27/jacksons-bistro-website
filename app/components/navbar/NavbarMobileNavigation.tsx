@@ -9,6 +9,7 @@ import logo from '/public/assets/images/Logo.svg'
 import { navLinks } from '@/app/info'
 import { usePathname } from 'next/navigation'
 import { useRef, useState } from 'react'
+import Link from 'next/link'
 
 function NavbarMobileNavigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,11 +37,8 @@ function NavbarMobileNavigation() {
 
           return (
             <div key={i}>
-              <MenuItem
-                href={path}
-                className={`text-black-100 hover:bg-black-5 ${pathname === path && 'font-semibold'}`}
-              >
-                {label}
+              <MenuItem className={`text-black-100 hover:bg-black-5 ${pathname === path && 'font-semibold'}`}>
+                <Link href={path}>{label}</Link>
               </MenuItem>
 
               {divider && <MenuDivider className="bg-black-10" />}
