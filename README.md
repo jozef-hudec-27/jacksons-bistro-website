@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Assignment: Design and Develop Website for Jackson's Bistro
 
-## Getting Started
+We have been hired by the owners of Jackson's Bistro to design and build a website for their restaurant.
 
-First, run the development server:
+## Client Information
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Jackson's Bistro is a family-owned restaurant nestled in the heart of Chicago. With a legacy of exquisite culinary experiences spanning three generations, they're ready to embrace the digital era. They're seeking a dynamic website to showcase their delectable dishes, connect with patrons, and provide an online platform for reservations.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Logo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We have been given the logo of Jackson's Bistro:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<img src="https://raw.githubusercontent.com/jozef-hudec-27/jacksons-bistro-website/29226a69173bb8cb8dd724b1c6bd66750446d7f0/public/assets/images/Logo.svg" alt="Jackson's Bistro logo" width="96">
 
-## Learn More
+## Website Structure
 
-To learn more about Next.js, take a look at the following resources:
+Jackson's Bistro envisions a 5-page website that captures the essence of their restaurant. The pages are:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Home
+- Menu
+- About Us
+- Reservations
+- Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Home Page
 
-## Deploy on Vercel
+The home page should instantly transport visitors to the cozy ambiance of Jackson's Bistro. It will feature:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- A warm welcome message, inviting patrons to indulge in a culinary adventure
+- A high-quality image gallery showcasing signature dishes
+- A call-to-action button linking to the reservations page
+- Social media integration to display the latest updates and special offers
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Menu Page
+
+The menu page will tantalize taste buds and highlight the restaurant's culinary expertise:
+
+- A categorized menu layout (appetizers, soups, etc.)
+- A visually appealing presentation of dishes, complete with mouth-watering images
+- Brief descriptions of each dish, emphasizing their unique flavors
+
+### About Us Page
+
+The about us page will narrate the rich history and values of Jackson's Bistro:
+
+- A narrative about the restaurant's origin and its journey through generations
+- Images that capture the ambiance and decor of the restaurant
+
+## Reservations Page
+
+- An intuitive reservation form allowing patrons to select date, time, and party size
+- A brief guide on special requests and dietary accommodations
+
+## Contact Page
+
+- The contact page aims to foster communication and feedback:
+- A contact form for inquiries, feedback, and catering requests
+
+## Design Aesthetics
+
+Considering the restaurant's warm and inviting atmosphere, the website's design should reflect:
+
+- Rich, earthy tones and warm color palette
+- Visual elements that evoke the sense of comfort and luxury
+- Use of images that showcase not only dishes but also the interior and staff interactions
+- Fonts that exude elegance and are easy to read
+
+## Mobile Responsiveness
+
+Given the increasing mobile traffic, ensuring a seamless experience across devices is crucial. The design should adapt gracefully to various screen sizes while maintaining the same level of visual appeal and functionality.
+
+# Note
+
+Please note that the information here is fictional and this website was built strictly for educational purposes.
+
+[See it live](https://jacksons-bistro-website.vercel.app/)
