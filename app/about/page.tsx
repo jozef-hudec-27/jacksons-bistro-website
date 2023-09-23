@@ -14,7 +14,7 @@ function AboutPage() {
   return (
     <div>
       <section id="our-story">
-        <div className="hero-bg bg-[url('/assets/images/about_hero.webp')]">
+        <div className="hero-bg bg-[url('/assets/images/heros/about/about_hero_lg.avif')]">
           <div className="wrapper">
             <h2>Our Story</h2>
           </div>
@@ -35,6 +35,7 @@ function AboutPage() {
                   src={image}
                   alt={title}
                   className="h-[288px] sm:h-[320px] lg:h-[384px] w-[288px] sm:w-[320px] lg:w-[384px] rounded-[1px]"
+                  sizes="(min-width: 1024px) 384px, (min-width: 768px) 320px, 288px"
                 />
 
                 <div className="flex flex-col gap-[16px] items-center">

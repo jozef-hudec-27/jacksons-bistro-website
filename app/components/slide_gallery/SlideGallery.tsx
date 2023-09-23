@@ -19,8 +19,10 @@ function SlideGallery({ slides }: { slides: Slide[] }) {
   //   Cannot use dynamic values because of Tailwind
   const displayImgClass =
     'min-h-[288px] max-h-[288px] md:min-h-[320px] md:max-h-[320px] lg:min-h-[384px] lg:max-h-[384px] min-w-[288px] max-w-[288px] md:min-w-[320px] md:max-w-[320px] lg:min-w-[384px] lg:max-w-[384px]'
+  const displayImgSizes = '(min-width: 1024px) 384px, (min-width: 768px) 320px, 288px'
   const hiddenImgClass =
     'min-h-[216px] max-h-[216px] md:min-h-[240px] md:max-h-[240px] lg:min-h-[288px] lg:max-h-[288px] min-w-[216px] max-w-[216px] md:min-w-[240px] md:max-w-[240px] lg:min-w-[288px] lg:max-w-[288px'
+  const hiddenImgSizes = '(min-width: 1024px) 288px, (min-width: 768px) 240px, 216px'
   const descriptionClass = 'w-[288px] md:w-[320px] lg:w-[384px]'
   const btnClass = (type: 'prev' | 'next') => {
     return type === 'prev'
@@ -33,7 +35,9 @@ function SlideGallery({ slides }: { slides: Slide[] }) {
       <div className="flex items-center">
         <button
           onClick={() => setCurrentSlide((current) => nextSlide(current))}
-          className={`text-2xl text-primary ${btnClass('prev')} hover:-rotate-45 focus:-rotate-45 h-fit duration-700 hover:duration-300`}
+          className={`text-2xl text-primary ${btnClass(
+            'prev'
+          )} hover:-rotate-45 focus:-rotate-45 h-fit duration-700 hover:duration-300`}
           aria-label="Previous slide"
         >
           <BsChevronLeft aria-hidden />
@@ -45,6 +49,7 @@ function SlideGallery({ slides }: { slides: Slide[] }) {
               src={slides[prevSlide(currentSlide)].image}
               alt={slides[prevSlide(currentSlide)].alt}
               className={`${hiddenImgClass} opacity-90`}
+              sizes={hiddenImgSizes}
             />
           </div>
 
@@ -53,6 +58,7 @@ function SlideGallery({ slides }: { slides: Slide[] }) {
               src={slides[currentSlide].image}
               alt={`Team member - ${slides[currentSlide].alt}`}
               className={displayImgClass}
+              sizes={displayImgSizes}
             />
           </div>
 
@@ -61,13 +67,16 @@ function SlideGallery({ slides }: { slides: Slide[] }) {
               src={slides[nextSlide(currentSlide)].image}
               alt={slides[nextSlide(currentSlide)].alt}
               className={`${hiddenImgClass} opacity-90`}
+              sizes={hiddenImgSizes}
             />
           </div>
         </div>
 
         <button
           onClick={() => setCurrentSlide((current) => prevSlide(current))}
-          className={`text-2xl text-primary ${btnClass('next')} hover:rotate-45 focus:rotate-45 h-fit duration-700 hover:duration-300`}
+          className={`text-2xl text-primary ${btnClass(
+            'next'
+          )} hover:rotate-45 focus:rotate-45 h-fit duration-700 hover:duration-300`}
           aria-label="Next slide"
         >
           <BsChevronRight aria-hidden />

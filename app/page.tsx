@@ -17,7 +17,7 @@ function HomePage() {
     <div>
       <section id="hero">
         <div
-          className="bg-[url('/assets/images/bartender_hero.webp')] bg-cover bg-center border w-full h-[25vh] sm:h-[47vh]"
+          className="bg-[url('/assets/images/heros/home/bartender_hero_original.avif')] bg-cover bg-center border w-full h-[25vh] sm:h-[47vh]"
           aria-hidden
         ></div>
 
@@ -54,6 +54,7 @@ function HomePage() {
                   src={image}
                   alt={alt}
                   className="h-[288px] sm:h-[320px] lg:h-[384px] w-[288px] sm:w-[320px] lg:w-[384px]"
+                  sizes="(min-width: 1024px) 384px, (min-width: 768px) 320px, 288px"
                 />
               </div>
             )

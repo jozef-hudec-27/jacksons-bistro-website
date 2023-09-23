@@ -11,10 +11,13 @@ interface Meal {
 
 function MealsCarousel() {
   const meals: Meal[] = [
-    { path: 'bg-[url("/assets/images/food/salmon-hq.webp")]', alt: 'Salmon served with vegetables' },
-    { path: 'bg-[url("/assets/images/food/chicken-bowl-hq.webp")]', alt: 'Chicken bowl' },
-    { path: 'bg-[url("/assets/images/food/pasta-pan-hq.webp")]', alt: 'Pasta with meat and vegetables' },
-    { path: 'bg-[url("/assets/images/food/mixed-salad-hq.webp")]', alt: 'Mixed salad' },
+    { path: 'bg-[url("/assets/images/food/salmon/salmon_original.avif")]', alt: 'Salmon served with vegetables' },
+    { path: 'bg-[url("/assets/images/food/chicken-bowl/chicken_bowl_original.avif")]', alt: 'Chicken bowl' },
+    {
+      path: 'bg-[url("/assets/images/food/pasta-pan/pasta_pan_original.avif")]',
+      alt: 'Pasta with meat and vegetables',
+    },
+    { path: 'bg-[url("/assets/images/food/mixed-salad/mixed_salad_original.avif")]', alt: 'Mixed salad' },
   ]
 
   const carouselArrow = (direction: 'left' | 'right', clickHandler: () => void, label: string): React.ReactNode => {

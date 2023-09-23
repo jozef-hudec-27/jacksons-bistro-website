@@ -57,18 +57,18 @@ export const philosophy: PhilosophyEntry[] = [
     title: 'Sourcing Excellence',
     description:
       'We are committed to the pursuit of excellence, starting with the ingredients we choose. We source locally whenever possible, forging relationships with farmers and artisans who share our dedication to quality and sustainability. Every bite tells a tale of meticulous selection and careful curation.',
-    path: "bg-[url('/assets/images/philosophy/sourcing.webp')]",
+    path: "bg-[url('/assets/images/philosophy/sourcing/sourcing_lg.avif')]",
   },
   {
     title: 'Global Inspiration, Local Heart',
     description:
       "We draw inspiration from the world's cuisines, celebrating the diverse tapestry of flavors that enrich our global culinary heritage. But at our core, we remain rooted in our local community. Our goal is to transport you on a gastronomic journey while making you feel at home, surrounded by the warmth of familiar hospitality.",
-    path: "bg-[url('/assets/images/philosophy/inspiration.webp')]",
+    path: "bg-[url('/assets/images/philosophy/inspiration/inspiration_lg.avif')]",
   },
   {
     title: 'Memories Shared, Moments Created',
     description:
       "For us, dining is more than a meal—it's an experience woven with care, designed to create memories that linger long after the last bite. Whether it's a romantic evening, a family gathering, or a celebration of milestones, we take pride in being a part of your cherished moments.",
-    path: "bg-[url('/assets/images/philosophy/memories.webp')]",
+    path: "bg-[url('/assets/images/philosophy/memories/memories_lg.avif')]",
   },
 ]
