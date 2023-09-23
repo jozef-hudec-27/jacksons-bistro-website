@@ -24,7 +24,7 @@ function Navbar() {
       </div>
 
       <div className="hidden md:flex items-center gap-[12px] lg:gap-[24px]">
-        <Link href="/" className="link primary">
+        <Link href="/reservations" className="link primary">
           Book a Table
         </Link>
 
